@@ -21,7 +21,7 @@ else:
     app.config.from_object('azureproject.production')
 
 app.config.update(
-    SQLALCHEMY_DATABASE_URI=app.config.get('postgresql://pgadmin%40flaskdemo123:Dev%402003@flaskdemo123.postgres.database.azure.com:5432/flaskdb?sslmode=require'),
+    SQLALCHEMY_DATABASE_URI=app.config.get('DATABASE_URI'),
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
 
