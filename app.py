@@ -21,7 +21,7 @@ else:
     app.config.from_object('azureproject.production')
 
 app.config.update(
-    SQLALCHEMY_DATABASE_URI=app.config.get('DATABASE_URI'),
+    SQLALCHEMY_DATABASE_URI=app.os.environ.get('DATABASE_URI'),
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
 
